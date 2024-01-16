@@ -1,0 +1,15 @@
+{
+    "info": {
+        "url_png_icon_64x64": "https://www.logicalmechanism.io/img/poolLogo.png",
+        "url_png_logo": "https://www.logicalmechanism.io/img/fullLogo.png",
+        "location": "CA, USA",
+        "social": {
+            "github_handle": "logicalmechanism"
+        },
+        "about": {
+            "server": "Bare Metal Single Pool",
+	    "me": "Support Small Stake Pools!",
+            "string":"63a81273c8582668b7"
+        }
+    }
+}
