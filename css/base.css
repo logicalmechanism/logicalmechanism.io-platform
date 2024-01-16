@@ -108,15 +108,10 @@ section {
 }
 
 .centered {
-    display: block;
-    justify-content: center;
     /* Centers horizontally */
     align-items: center;
     /* Centers vertically */
     text-align: center;
-    /* Centers text for block elements inside */
-    height: auto;
-    /* You might adjust this based on your layout */
 }
 
 .btn {
