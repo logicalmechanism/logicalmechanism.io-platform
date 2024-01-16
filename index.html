@@ -76,8 +76,8 @@
         }
 
         section {
-            padding: 40px;
-            margin: 40px;
+            overflow: auto; /* or hidden */
+            height: auto;
         }
 
         @media screen and (max-width: 768px) {
@@ -287,11 +287,8 @@
         .card h3 {
             margin: 0 0 10px;
             /* Adjust spacing as needed */
-            white-space: nowrap;
             /* Prevent text from wrapping */
-            overflow: hidden;
             /* Hide overflow */
-            text-overflow: ellipsis;
             /* Add ellipsis for overflow text */
             max-width: 100%;
             /* Ensure text doesn't exceed card width */
@@ -361,6 +358,7 @@
             font-weight: bold;
             color: #00ADB5;
         }
+
     </style>
 </head>
 
@@ -458,7 +456,7 @@
         </div>
     </section>
 
-    <footer class="centered">
+    <section id="footer" class="centered">
         <p>Logical Mechanism LLC owns and operates the [LOGIC] stake pool.</p>
         <p>© 2024 Logical Mechanism LLC</p>
         <div><small>cardano:
@@ -477,7 +475,7 @@
                 <img src="img/github.svg" alt="GitHub" class="icon">
             </a>
         </div>
-    </footer>
+    </section>
 
     <!-- back to top button -->
     <a href="#top" class="btn to-top-btn"">Back To Top</a>
