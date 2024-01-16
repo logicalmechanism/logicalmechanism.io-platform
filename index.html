@@ -75,15 +75,8 @@
             text-decoration: none;
         }
 
-        @media screen and (max-width: 768px) {
 
-            /* Adjust the max-width as needed */
-            .mission-image {
-                display: none;
-            }
-        }
-
-        @media (max-width: 375px) {
+        @media (max-width: 430px) {
             .nav-bar ul {
                 flex-direction: column;
                 /* Stack links vertically */
@@ -110,7 +103,6 @@
                 /* Reduce padding */
             }
         }
-
 
         .teal {
             color: #00ADB5;
@@ -214,6 +206,14 @@
             /* Maintains the aspect ratio */
         }
 
+        @media screen and (max-width: 768px) {
+
+            /* Adjust the max-width as needed */
+            .mission-image {
+                display: none;
+            }
+        }
+
         .btn {
             background-color: #EEEFEE;
             color: #EEEEEE;
@@ -248,7 +248,8 @@
         .card {
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Vertically center content */
+            justify-content: center;
+            /* Vertically center content */
             place-items: center;
             /* Distribute space evenly */
             align-items: center;
@@ -274,9 +275,10 @@
             /* Maintain aspect ratio */
             margin-bottom: 10px;
             /* Space between image and text */
-            margin-top: auto; /* Pushes the link to the bottom */
+            margin-top: auto;
+            /* Pushes the link to the bottom */
 
-            
+
         }
 
         .card h3 {
@@ -341,10 +343,12 @@
         }
 
         .icon {
-            width: 50px; /* Adjust size as needed */
+            width: 50px;
+            /* Adjust size as needed */
             padding: 10px;
             height: auto;
-            transition: opacity 0.3s; /* Smooth transition for hover effect */
+            transition: opacity 0.3s;
+            /* Smooth transition for hover effect */
         }
 
         .contact-text a {
@@ -366,7 +370,7 @@
     <!-- back to top button -->
     <a href="#top" class="btn to-top-btn"">Back To Top</a>
     <!-- Navigation Bar at top of page -->
-    <nav class="nav-bar">
+    <nav class=" nav-bar">
         <ul class="nav-left">
             <li><a href="#" class="unclickable">Logical Mechanism</a></li>
         </ul>
@@ -378,105 +382,115 @@
             <li><a href="#about">About</a></li>
             <li><a href="#contact" class="pad-right">Contact</a></li>
         </ul>
-    </nav>
+        </nav>
 
-    <!-- different sections of the page -->
-    <section id="splash" class="centered">
-        <h1>Decentralized Applications</h1>
-        <h3>Built on the Cardano Blockchain</h3>
+        <!-- different sections of the page -->
+        <section id="splash" class="centered">
+            <h1>Decentralized Applications</h1>
+            <h3>Built on the Cardano Blockchain</h3>
 
-        <div class="mission-and-image">
-            <div class="mission-text">
-                <p>Our mission is to provide open-sourced decentralized applications for the everyday user.</p>
+            <div class="mission-and-image">
+                <div class="mission-text">
+                    <p>Our mission is to provide open-sourced decentralized applications for the everyday user.</p>
+                    <br /><br /><br /><br />
+                    <p><a href="#contact">Contact</a> to build your decentralized dream.</p>
+                </div>
+                <div class="mission-image">
+                    <img src="img/world.png" alt="World Image">
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="centered">
+            <h2 class="teal">Projects</h2>
+            <div class="cards-container">
+
+                <div class="card">
+                    <img src="img/dd-logo.svg" alt="Dripdropz">
+                    <a href="https://dripdropz.io/">dripdropz.io</a>
+                </div>
+
+                <div class="card">
+                    <img src="img/newm-logo.png" alt="NEWM">
+                    <a href="https://newm.io/">newm.io</a>
+                </div>
+
+                <div class="card">
+                    <img src="img/tr-logo.svg" alt="Token Riot">
+                    <a href="https://tokenriot.io/">tokenriot.io</a>
+                </div>
+
+                <div class="card">
+                    <img src="img/corn-logo.svg" alt="Cornucopias">
+                    <a href="https://www.cornucopias.io/">cornucopias.io</a>
+                </div>
+
+                <div class="card">
+                    <img src="img/adosia-logo.png" alt="Adosia">
+                    <a href="https://adosia.com/index.php">adosia.com</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="centered">
+            <h2 class="teal">About</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="img/tak.png" alt="The Ancient Kraken">
+                    <h3>The Ancient Kraken</h3>
+                    <h5>CEO - Engineer</h5>
+                    <a href="https://twitter.com/AncientKraken" target="_blank" rel="noopener noreferrer">
+                        <img src="img/twitter.svg" alt="Twitter">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="centered">
+            <h2 class="teal">Contact</h2>
+            <div class="contact-text">
+                <p>
+                    Logical Mechanism specializes in providing expert technical consulting, comprehensive project
+                    development and planning, and in-depth research tailored to the dynamic world of blockchain
+                    technologies. Whether you're at the cusp of a new idea or need advanced support for ongoing
+                    initiatives, our team is equipped to guide you through every stage of your journey. We understand
+                    that every project is unique, with its own set of challenges and opportunities, and a
+                    one-size-fits-all approach is far from applicable. Instead, we collaborate closely with you to
+                    understand your specific needs, ambitions, and the nuances of your project. This personalized
+                    approach ensures the delivery of the most effective and innovative solutions tailored to individual
+                    requirements.
+                </p>
+                <p>
+                    Please reach out to us via email, and let's start the conversation about how we can bring your
+                    blockchain project to life. Every great achievement begins with a conversation, and we're excited to
+                    hear from you.
+                </p>
                 <br /><br /><br /><br />
-                <p><a href="#contact">Contact</a> to build your decentralized dream.</p>
-            </div>
-            <div class="mission-image">
-                <img src="img/world.png" alt="World Image">
-            </div>
-        </div>
-    </section>
+                <p>Email us at: <span id="email">support@logicalmechanism.io</span></p>
 
-    <section id="projects" class="centered">
-        <h2 class="teal">Projects</h2>
-        <div class="cards-container">
-
-            <div class="card">
-                <img src="img/dd-logo.svg" alt="Dripdropz">
-                <a href="https://dripdropz.io/">dripdropz.io</a>
             </div>
+        </section>
 
-            <div class="card">
-                <img src="img/newm-logo.png" alt="NEWM">
-                <a href="https://newm.io/">newm.io</a>
+        <section class="centered foot-bar">
+            <p>Logical Mechanism LLC owns and operates the [LOGIC] stake pool.</p>
+            <p>© 2024 Logical Mechanism LLC</p>
+            <div><small>cardano:
+                </small><small>addr1q8rdcfvj5a27gmp04q5c4nuly385mseam09y777xa8mjn40ax0z9yaxg2mjj3ctg4uj6ggwsc6nja0kj446w2gv5zcvqjk47zh</small>
             </div>
-
-            <div class="card">
-                <img src="img/tr-logo.svg" alt="Token Riot">
-                <a href="https://tokenriot.io/">tokenriot.io</a>
+            <br />
+            <div><small>monero:
+                </small><small>44DiRiEWVkXghqESJfMkMG6J3YwMSQqzNaRwEYSYQZBkHJwhRbqsAX76g978xP1b1sHAk8BLbmsmWZff8AVpNaNHRP1jYJM</small>
             </div>
-
-            <div class="card">
-                <img src="img/corn-logo.svg" alt="Cornucopias">
-                <a href="https://www.cornucopias.io/">cornucopias.io</a>
-            </div>
-
-            <div class="card">
-                <img src="img/adosia-logo.png" alt="Adosia">
-                <a href="https://adosia.com/index.php">adosia.com</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="centered">
-        <h2 class="teal">About</h2>
-        <div class="cards-container">
-            <div class="card">
-                <img src="img/tak.png" alt="The Ancient Kraken">
-                <h3>The Ancient Kraken</h3>
-                <h5>CEO - Engineer</h5>
-                <a href="https://twitter.com/AncientKraken" target="_blank" rel="noopener noreferrer">
-                    <img src="img/twitter.svg" alt="Twitter">
+            <div>
+                <br /><br /><br /><br />
+                <a href="https://twitter.com/LogicalMechnism" target="_blank" rel="noopener noreferrer">
+                    <img src="img/twitter.svg" alt="Twitter" class="icon">
+                </a>
+                <a href="https://github.com/logicalmechanism" target="_blank" rel="noopener noreferrer">
+                    <img src="img/github.svg" alt="GitHub" class="icon">
                 </a>
             </div>
-        </div>
-    </section>
-
-    <section id="contact" class="centered">
-        <h2 class="teal">Contact</h2>
-        <div class="contact-text">
-            <p>
-                Logical Mechanism specializes in providing expert technical consulting, comprehensive project development and planning, and in-depth research tailored to the dynamic world of blockchain technologies. Whether you're at the cusp of a new idea or need advanced support for ongoing initiatives, our team is equipped to guide you through every stage of your journey. We understand that every project is unique, with its own set of challenges and opportunities, and a one-size-fits-all approach is far from applicable. Instead, we collaborate closely with you to understand your specific needs, ambitions, and the nuances of your project. This personalized approach ensures the delivery of the most effective and innovative solutions tailored to individual requirements.
-            </p>
-            <p>
-                Please reach out to us via email, and let's start the conversation about how we can bring your blockchain project to life. Every great achievement begins with a conversation, and we're excited to hear from you.
-            </p>
-            <br /><br /><br /><br />
-            <p>Email us at: <span id="email">support@logicalmechanism.io</span></p>
-
-        </div>
-    </section>
-
-    <section class="centered foot-bar">
-        <p>Logical Mechanism LLC owns and operates the [LOGIC] stake pool.</p>
-        <p>© 2024 Logical Mechanism LLC</p>
-        <div><small>cardano:
-            </small><small>addr1q8rdcfvj5a27gmp04q5c4nuly385mseam09y777xa8mjn40ax0z9yaxg2mjj3ctg4uj6ggwsc6nja0kj446w2gv5zcvqjk47zh</small>
-        </div>
-        <br />
-        <div><small>monero:
-            </small><small>44DiRiEWVkXghqESJfMkMG6J3YwMSQqzNaRwEYSYQZBkHJwhRbqsAX76g978xP1b1sHAk8BLbmsmWZff8AVpNaNHRP1jYJM</small>
-        </div>
-        <div>
-            <br /><br /><br /><br />
-            <a href="https://twitter.com/LogicalMechnism" target="_blank" rel="noopener noreferrer">
-                <img src="img/twitter.svg" alt="Twitter" class="icon">
-            </a>
-            <a href="https://github.com/logicalmechanism" target="_blank" rel="noopener noreferrer">
-                <img src="img/github.svg" alt="GitHub" class="icon">
-            </a>
-        </div>
-    </section>
+        </section>
 </body>
 
 </html>
