@@ -142,9 +142,9 @@ section {
 
 .icon {
     width: 50px;
+    height: auto;
     /* Adjust size as needed */
     padding: 10px;
-    height: auto;
     transition: opacity 0.3s;
     /* Smooth transition for hover effect */
 }
