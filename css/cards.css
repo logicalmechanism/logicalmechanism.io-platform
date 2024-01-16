@@ -48,19 +48,12 @@
 
 .card h3 {
     margin: 0 0 10px;
-    /* Adjust spacing as needed */
-    /* Prevent text from wrapping */
-    /* Hide overflow */
-    /* Add ellipsis for overflow text */
     max-width: 100%;
-    /* Ensure text doesn't exceed card width */
 }
 
 .card a {
     color: #00ADB5;
-    /* Color of the link /
-        text-decoration: none; / Removes underline /
-        / Additional styling for the link */
+    padding-bottom: 5px;
 }
 
 @media (max-width: 768px) {
