@@ -75,11 +75,6 @@
             text-decoration: none;
         }
 
-        section {
-            overflow: auto; /* or hidden */
-            height: auto;
-        }
-
         @media screen and (max-width: 768px) {
 
             /* Adjust the max-width as needed */
@@ -359,11 +354,16 @@
             color: #00ADB5;
         }
 
+        .foot-bar {
+            padding-top: 150px;
+        }
     </style>
 </head>
 
 <body>
     <a id="top"></a>
+    <!-- back to top button -->
+    <a href="#top" class="btn to-top-btn"">Back To Top</a>
     <!-- Navigation Bar at top of page -->
     <nav class="nav-bar">
         <ul class="nav-left">
@@ -456,7 +456,7 @@
         </div>
     </section>
 
-    <section id="footer" class="centered">
+    <section class="centered foot-bar">
         <p>Logical Mechanism LLC owns and operates the [LOGIC] stake pool.</p>
         <p>© 2024 Logical Mechanism LLC</p>
         <div><small>cardano:
@@ -476,9 +476,6 @@
             </a>
         </div>
     </section>
-
-    <!-- back to top button -->
-    <a href="#top" class="btn to-top-btn"">Back To Top</a>
 </body>
 
 </html>
