@@ -147,3 +147,8 @@ section {
         max-width: 992px;
     }
 }
+
+#top {
+    position: absolute;
+    top:0;
+}
