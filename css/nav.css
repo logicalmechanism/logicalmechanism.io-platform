@@ -1,0 +1,71 @@
+.nav-bar {
+    background-color: #2E3440;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid transparent;
+    /* Adjust thickness as needed */
+    background-image: linear-gradient(to right, #2E3440, #222831), linear-gradient(to bottom, rgba(0, 0, 0, 0.1), transparent);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 85px;
+    box-sizing: border-box;
+    
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+}
+
+.nav-bar li {
+    margin: 0 15px;
+}
+
+.nav-bar a {
+    color: #ececec;
+    text-decoration: none;
+}
+
+.nav-left {
+    justify-content: flex-start;
+}
+
+.nav-right {
+    justify-content: flex-end;
+}
+
+@media (max-width: 767px) {
+    .nav-bar ul {
+        flex-direction: column;
+        /* Stack links vertically */
+        align-items: center;
+        /* Align items in the center */
+        width: 100%;
+        /* Full width */
+        padding: 0;
+        /* Reset padding */
+    }
+
+    .nav-bar li a {
+        font-size: 0.9rem;
+        /* Adjust the font size as needed */
+    }
+
+    .nav-bar li {
+        margin: 0 5px;
+        /* Reduce margin */
+    }
+
+    .nav-bar li a {
+        padding: 0px 0px;
+        /* Reduce padding */
+    }
+}

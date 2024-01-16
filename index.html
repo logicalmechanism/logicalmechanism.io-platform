@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="The main website for Logical Mechanism.">
+    <meta name="description" content="Providing open-sourced decentralized applications for everyday use.">
 
     <title>Logical Mechanism</title>
 
@@ -18,480 +18,161 @@
     <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
     <link rel="manifest" href="fav/site.webmanifest">
 
-    <!-- Style -->
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            /* Prevents horizontal scroll */
-        }
-
-        body {
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            background-color: #222831;
-            color: #EEEEEE;
-            font-family: 'Comfortaa', sans-serif;
-            font-size: 18px;
-            background-image: linear-gradient(#222831, #222831 50px, #121212 100px);
-            /* Adjust colors and heights */
-            overflow-x: hidden;
-            /* Prevents horizontal scroll */
-        }
-
-        code {
-            user-select: all;
-        }
-
-        span {
-            user-select: all;
-        }
-
-        small {
-            user-select: all;
-        }
-
-        nav ul {
-            list-style-type: none;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            margin: 0 10px;
-        }
-
-        nav ul li a {
-            color: #EEEEEE;
-            text-decoration: none;
-        }
-
-        section {
-            padding-top: 120px;
-        }
-
-        @media (max-width: 430px) {
-            .nav-bar ul {
-                flex-direction: column;
-                /* Stack links vertically */
-                align-items: center;
-                /* Align items in the center */
-                width: 100%;
-                /* Full width */
-                padding: 0;
-                /* Reset padding */
-            }
-
-            .nav-bar li a {
-                font-size: 0.9rem;
-                /* Adjust the font size as needed */
-            }
-
-            .nav-bar li {
-                margin: 0 5px;
-                /* Reduce margin */
-            }
-
-            .nav-bar li a {
-                padding: 0px 0px;
-                /* Reduce padding */
-            }
-        }
-
-        .teal {
-            color: #00ADB5;
-        }
-
-        .nav-bar {
-            background-color: #2E3440;
-            padding-top: 1px;
-            padding-bottom: 1px;
-            margin-bottom: 100px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            border-bottom: 1px solid transparent;
-            /* Adjust thickness as needed */
-            background-image: linear-gradient(to right, #2E3440, #222831), linear-gradient(to bottom, rgba(0, 0, 0, 0.1), transparent);
-            background-origin: border-box;
-            background-clip: content-box, border-box;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 125px;
-            box-sizing: border-box;
-            position: sticky;
-            top: 0;
-            /* This ensures the navbar sticks to the top of the viewport */
-            z-index: 1000;
-            /* Optional: ensures the navbar stays above other content */
-        }
-
-        .nav-bar ul {
-            list-style: none;
-            display: flex;
-            margin: 5px;
-            padding: 5px;
-        }
-
-        .nav-bar li {
-            margin: 0 15px;
-        }
-
-        .nav-bar a {
-            color: #ececec;
-            text-decoration: none;
-        }
-
-        .nav-left {
-            justify-content: flex-start;
-        }
-
-        .nav-right {
-            justify-content: flex-end;
-        }
-
-        .unclickable {
-            pointer-events: none;
-        }
-
-        .pad-right {
-            padding-right: 25px;
-        }
-
-        .centered {
-            display: block;
-            justify-content: center;
-            /* Centers horizontally */
-            align-items: center;
-            /* Centers vertically */
-            text-align: center;
-            /* Centers text for block elements inside */
-            height: 100%;
-            /* You might adjust this based on your layout */
-        }
-
-        .mission-and-image {
-            display: flex;
-            align-items: center;
-            /* Aligns items vertically in the center */
-            justify-content: center;
-            /* Centers the content horizontally */
-            gap: 20px;
-            /* Optional: Adds space between text and image */
-        }
-
-        .mission-text a {
-            text-decoration: none;
-            /* Or 'none' if you prefer a cleaner look */
-            font-weight: bold;
-            color: #00ADB5;
-        }
-
-
-        .mission-text,
-        .mission-image {
-            flex: 1;
-            /* Each takes up equal amount of space */
-        }
-
-        .mission-image img {
-            max-width: 90%;
-            /* Ensures the image is responsive */
-            height: auto;
-            /* Maintains the aspect ratio */
-        }
-
-        @media screen and (max-width: 768px) {
-
-            /* Adjust the max-width as needed */
-            .mission-image {
-                display: none;
-            }
-        }
-
-        .btn {
-            background-color: #EEEFEE;
-            color: #EEEEEE;
-            text-decoration: none;
-            padding: 7px 3px;
-            border: 2px solid transparent;
-        }
-
-        .btn:hover {
-            border: 2px solid #00ADB5;
-        }
-
-        .to-top-btn {
-            position: fixed;
-            bottom: 5%;
-            right: 5%;
-            background-color: transparent
-        }
-
-        .cards-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            /* Creates three columns */
-            grid-gap: 20px;
-            /* Adjust the space between cards */
-            max-width: 1200px;
-            /* Adjust based on your design */
-            margin: auto;
-            /* Center the grid in */
-        }
-
-        .card {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            /* Vertically center content */
-            place-items: center;
-            /* Distribute space evenly */
-            align-items: center;
-            /* Background color for the card */
-            border: 1px solid #00ADB5;
-            /* Border for the card */
-            border-radius: 10px;
-            /* Optional: rounded corners */
-            overflow: hidden;
-            /* Keeps everything inside the card */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            /* Optional: adds shadow for depth */
-            text-align: center;
-            /* Centering the content */
-            padding: 15px;
-            /* Padding inside the card */
-        }
-
-        .card img {
-            width: 70%;
-            /* Full width of the card */
-            height: auto;
-            /* Maintain aspect ratio */
-            margin-bottom: 10px;
-            /* Space between image and text */
-            margin-top: auto;
-            /* Pushes the link to the bottom */
-
-
-        }
-
-        .card h3 {
-            margin: 0 0 10px;
-            /* Adjust spacing as needed */
-            /* Prevent text from wrapping */
-            /* Hide overflow */
-            /* Add ellipsis for overflow text */
-            max-width: 100%;
-            /* Ensure text doesn't exceed card width */
-        }
-
-        .card a {
-            color: #00ADB5;
-            /* Color of the link /
-                text-decoration: none; / Removes underline /
-                / Additional styling for the link */
-        }
-
-        @media (max-width: 768px) {
-
-            /* For tablets */
-            .cards-container {
-                grid-template-columns: repeat(2, 1fr);
-                /* Two columns */
-            }
-
-            .card img {
-                display: none;
-                /* Hide images */
-            }
-        }
-
-        @media (max-width: 480px) {
-
-            /* For mobile phones */
-            .cards-container {
-                grid-template-columns: repeat(1, 1fr);
-                /* One column */
-            }
-
-            .card img {
-                display: none;
-                /* Hide images */
-            }
-
-            .card {
-                justify-content: center;
-                /* Center content vertically */
-                padding: 10px;
-            }
-
-            .card a {
-                display: block;
-                width: 100%;
-                padding: 10px;
-                border-radius: 5px;
-                /* Optional rounded corners */
-                text-align: center;
-                /* Additional link styling */
-            }
-        }
-
-        .icon {
-            width: 50px;
-            /* Adjust size as needed */
-            padding: 10px;
-            height: auto;
-            transition: opacity 0.3s;
-            /* Smooth transition for hover effect */
-        }
-
-        .contact-text a {
-            text-decoration: none;
-            /* Or 'none' if you prefer a cleaner look */
-            font-weight: bold;
-            color: #00ADB5;
-        }
-
-        .foot-bar {
-            padding-top: 200px;
-            margin-top: 200px;
-        }
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/splash.css">
+    <link rel="stylesheet" href="css/cards.css">
 </head>
 
 <body>
-    <a id="top"></a>
     <!-- back to top button -->
+    <a id="top"></a>
     <a href="#top" class="btn to-top-btn"">Back To Top</a>
+    
     <!-- Navigation Bar at top of page -->
-    <nav class=" nav-bar">
+    <header>
+        <nav class=" nav-bar">
         <ul class="nav-left">
-            <li><a href="#" class="unclickable">Logical Mechanism</a></li>
+            <li><a href="#top" class="">Logical Mechanism</a></li>
         </ul>
         <ul class="nav-right">
             <li><a href="https://cexplorer.io/pool/pool1q7k8mmnvsgthp94hpn8jrnacjewplvywq70eef90fv4nu7gedzp"
-                    target="_blank" rel="noopener noreferrer">Stake Pool</a></li>
-            <li><a href="https://github.com/logicalmechanism" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    target="_blank" rel="noopener noreferrer" aria-label="Explore the stake pool at cexplorer.io">Stake
+                    Pool</a></li>
+            <li><a href="https://github.com/logicalmechanism" target="_blank" rel="noopener noreferrer"
+                    aria-label="Explore the code at GitHub">GitHub</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact" class="pad-right">Contact</a></li>
         </ul>
         </nav>
+        </header>
 
-        <!-- different sections of the page -->
-        <section id="splash" class="centered">
-            <h1>Decentralized Applications</h1>
-            <h3>Built on the Cardano Blockchain</h3>
+        <main>
+            <!-- initial splash -->
+            <section id="splash" class="centered">
+                <h1>Decentralized Applications</h1>
+                <h3>Built on the Cardano Blockchain</h3>
 
-            <div class="mission-and-image">
-                <div class="mission-text">
-                    <p>Our mission is to provide open-sourced decentralized applications for the everyday user.</p>
-                    <p><a href="#contact">Contact</a> to build your decentralized dream.</p>
+                <div class="splash-container">
+                    <div class="splash-text">
+                        <p>Our mission is to provide open-sourced decentralized applications for the everyday user.</p>
+                        <p><a href="#contact">Contact</a> to build your decentralized dream.</p>
+                    </div>
+                    <div class="splash-image">
+                        <img src="img/world.png" alt="A world connected in a decentralized manner.">
+                    </div>
                 </div>
-                <div class="mission-image">
-                    <img src="img/world.png" alt="World Image">
+            </section>
+
+            <!-- grid of projects -->
+            <section id="projects" class="centered">
+                <h2 class="teal">Projects</h2>
+                <div class="cards-container">
+
+                    <div class="card">
+                        <img src="img/dd-logo.svg" alt="Dripdropz">
+                        <a href="https://dripdropz.io/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit the DripDropz Website.">dripdropz.io</a>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/newm-logo.png" alt="NEWM">
+                        <a href="https://newm.io/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit the Project NEWM Website.">newm.io</a>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/tr-logo.svg" alt="Token Riot">
+                        <a href="https://tokenriot.io/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit the Token Riot Website.">tokenriot.io</a>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/corn-logo.svg" alt="Cornucopias">
+                        <a href="https://www.cornucopias.io/" target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit the Cornucopias Website.">cornucopias.io</a>
+                    </div>
+
+                    <div class="card">
+                        <img src="img/adosia-logo.png" alt="Adosia">
+                        <a href="https://adosia.com/index.php" target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit the Adosia Website.">adosia.com</a>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="projects" class="centered">
-            <h2 class="teal">Projects</h2>
-            <div class="cards-container">
-
-                <div class="card">
-                    <img src="img/dd-logo.svg" alt="Dripdropz">
-                    <a href="https://dripdropz.io/">dripdropz.io</a>
+            <!-- about us section -->
+            <section id="about" class="centered">
+                <h2 class="teal">About</h2>
+                <div class="cards-container">
+                    <div class="card">
+                        <img src="img/tak.png" alt="The Ancient Kraken">
+                        <h3>The Ancient Kraken</h3>
+                        <h5>Development & Research</h5>
+                        <a href="https://twitter.com/AncientKraken" target="_blank" rel="noopener noreferrer"
+                            aria-label="Visit the ancient kraken's twitter.">
+                            <img src="img/twitter.svg" alt="Twitter">
+                        </a>
+                    </div>
                 </div>
+            </section>
 
-                <div class="card">
-                    <img src="img/newm-logo.png" alt="NEWM">
-                    <a href="https://newm.io/">newm.io</a>
+            <!-- contact us and footer-->
+            <section id="contact" class="centered">
+                <h2 class="teal">Contact</h2>
+                <div class="contact-text">
+                    <p>Please reach out to us via email at: <span id="email">support@logicalmechanism.io</span></p>
+
+                    <p>
+                        Logical Mechanism specializes in providing expert technical consulting, comprehensive project
+                        development and planning, and in-depth research tailored to the dynamic world of blockchain
+                        technologies. Whether you're at the cusp of a new idea or need advanced support for ongoing
+                        initiatives, our team is equipped to guide you through every stage of your journey.
+                    </p>
+                    <p>
+                        We understand that every project is unique, with its own set of challenges and opportunities,
+                        and a one-size-fits-all approach is far from applicable. Instead, we collaborate closely with you to
+                        understand your specific needs, ambitions, and the nuances of your project. This personalized
+                        approach ensures the delivery of the most effective and innovative solutions tailored to
+                        individual
+                        requirements.
+                    </p>
+                    <p>
+                        Let's start the conversation about how we can bring your
+                        blockchain project to life.
+                    </p>
+                    <p>Email us at: <span id="email">support@logicalmechanism.io</span></p>
                 </div>
+            </section>
+        </main>
 
-                <div class="card">
-                    <img src="img/tr-logo.svg" alt="Token Riot">
-                    <a href="https://tokenriot.io/">tokenriot.io</a>
-                </div>
-
-                <div class="card">
-                    <img src="img/corn-logo.svg" alt="Cornucopias">
-                    <a href="https://www.cornucopias.io/">cornucopias.io</a>
-                </div>
-
-                <div class="card">
-                    <img src="img/adosia-logo.png" alt="Adosia">
-                    <a href="https://adosia.com/index.php">adosia.com</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="centered">
-            <h2 class="teal">About</h2>
-            <div class="cards-container">
-                <div class="card">
-                    <img src="img/tak.png" alt="The Ancient Kraken">
-                    <h3>The Ancient Kraken</h3>
-                    <h5>CEO - Engineer</h5>
-                    <a href="https://twitter.com/AncientKraken" target="_blank" rel="noopener noreferrer">
-                        <img src="img/twitter.svg" alt="Twitter">
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="centered">
-            <h2 class="teal">Contact</h2>
-            <div class="contact-text">
-                <p>
-                    Logical Mechanism specializes in providing expert technical consulting, comprehensive project
-                    development and planning, and in-depth research tailored to the dynamic world of blockchain
-                    technologies. Whether you're at the cusp of a new idea or need advanced support for ongoing
-                    initiatives, our team is equipped to guide you through every stage of your journey. We understand
-                    that every project is unique, with its own set of challenges and opportunities, and a
-                    one-size-fits-all approach is far from applicable. Instead, we collaborate closely with you to
-                    understand your specific needs, ambitions, and the nuances of your project. This personalized
-                    approach ensures the delivery of the most effective and innovative solutions tailored to individual
-                    requirements.
-                </p>
-                <p>
-                    Please reach out to us via email, and let's start the conversation about how we can bring your
-                    blockchain project to life. Every great achievement begins with a conversation, and we're excited to
-                    hear from you.
-                </p>
-                <p>Email us at: <span id="email">support@logicalmechanism.io</span></p>
-
-            </div>
-        </section>
-
-        <section class="centered foot-bar">
+        <footer class="centered">
             <p>Logical Mechanism LLC owns and operates the [LOGIC] stake pool.</p>
             <p>© 2024 Logical Mechanism LLC</p>
             <div><small>cardano:
-                </small><small>addr1q8rdcfvj5a27gmp04q5c4nuly385mseam09y777xa8mjn40ax0z9yaxg2mjj3ctg4uj6ggwsc6nja0kj446w2gv5zcvqjk47zh</small>
+                </small><small id="cardano"
+                    class="payment-address">addr1q8rdcfvj5a27gmp04q5c4nuly385mseam09y777xa8mjn40ax0z9yaxg2mjj3ctg4uj6ggwsc6nja0kj446w2gv5zcvqjk47zh</small>
             </div>
             <div><small>monero:
-                </small><small>44DiRiEWVkXghqESJfMkMG6J3YwMSQqzNaRwEYSYQZBkHJwhRbqsAX76g978xP1b1sHAk8BLbmsmWZff8AVpNaNHRP1jYJM</small>
+                </small><small id="monero"
+                    class="payment-address">44DiRiEWVkXghqESJfMkMG6J3YwMSQqzNaRwEYSYQZBkHJwhRbqsAX76g978xP1b1sHAk8BLbmsmWZff8AVpNaNHRP1jYJM</small>
             </div>
             <div>
                 <br /><br /><br /><br />
-                <a href="https://twitter.com/LogicalMechnism" target="_blank" rel="noopener noreferrer">
+                <a href="https://twitter.com/LogicalMechnism" target="_blank" rel="noopener noreferrer"
+                    aria-label="Visit the company's twitter.">
                     <img src="img/twitter.svg" alt="Twitter" class="icon">
                 </a>
-                <a href="https://github.com/logicalmechanism" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/logicalmechanism" target="_blank" rel="noopener noreferrer"
+                    aria-label="Explore the code at GitHub">
                     <img src="img/github.svg" alt="GitHub" class="icon">
                 </a>
             </div>
-        </section>
+        </footer>
+
+
 </body>
 
 </html>

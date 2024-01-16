@@ -1,0 +1,37 @@
+.splash-container {
+    display: flex;
+    align-items: center;
+    /* Aligns items vertically in the center */
+    justify-content: center;
+    /* Centers the content horizontally */
+    gap: 20px;
+    /* Optional: Adds space between text and image */
+}
+
+.splash-text a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #00ADB5;
+}
+
+
+.splash-text,
+.splash-image {
+    flex: 1;
+    /* Each takes up equal amount of space */
+}
+
+.splash-image img {
+    max-width: 90%;
+    /* Ensures the image is responsive */
+    height: auto;
+    /* Maintains the aspect ratio */
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Adjust the max-width as needed */
+    .splash-image {
+        display: none;
+    }
+}

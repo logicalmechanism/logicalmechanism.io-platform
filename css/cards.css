@@ -1,0 +1,108 @@
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Creates three columns */
+    grid-gap: 20px;
+    /* Adjust the space between cards */
+    max-width: 1200px;
+    /* Adjust based on your design */
+    margin: auto;
+    /* Center the grid in */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Vertically center content */
+    place-items: center;
+    /* Distribute space evenly */
+    align-items: center;
+    /* Background color for the card */
+    border: 1px solid #00ADB5;
+    /* Border for the card */
+    border-radius: 10px;
+    /* Optional: rounded corners */
+    overflow: hidden;
+    /* Keeps everything inside the card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Optional: adds shadow for depth */
+    text-align: center;
+    /* Centering the content */
+    padding: 15px;
+    /* Padding inside the card */
+}
+
+.card img {
+    width: 70%;
+    /* Full width of the card */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-bottom: 10px;
+    /* Space between image and text */
+    margin-top: auto;
+    /* Pushes the link to the bottom */
+
+
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    /* Adjust spacing as needed */
+    /* Prevent text from wrapping */
+    /* Hide overflow */
+    /* Add ellipsis for overflow text */
+    max-width: 100%;
+    /* Ensure text doesn't exceed card width */
+}
+
+.card a {
+    color: #00ADB5;
+    /* Color of the link /
+        text-decoration: none; / Removes underline /
+        / Additional styling for the link */
+}
+
+@media (max-width: 768px) {
+
+    /* For tablets */
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* Two columns */
+    }
+
+    .card img {
+        display: none;
+        /* Hide images */
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* For mobile phones */
+    .cards-container {
+        grid-template-columns: repeat(1, 1fr);
+        /* One column */
+    }
+
+    .card img {
+        display: none;
+        /* Hide images */
+    }
+
+    .card {
+        justify-content: center;
+        /* Center content vertically */
+        padding: 10px;
+    }
+
+    .card a {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        /* Optional rounded corners */
+        text-align: center;
+        /* Additional link styling */
+    }
+}

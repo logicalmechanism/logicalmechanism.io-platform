@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Prevents horizontal scroll */
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #222831;
+    color: #EEEEEE;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 18px;
+    background-image: linear-gradient(#222831, #222831 50px, #121212 100px);
+    /* Adjust colors and heights */
+    overflow-x: hidden;
+    /* Prevents horizontal scroll */
+}
+
+header {
+    /* This ensures the navbar sticks to the top of the viewport */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+footer {
+    padding-top: 25px;
+}
+
+code {
+    user-select: all;
+}
+
+span {
+    user-select: all;
+}
+
+small {
+    user-select: all;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+section {
+    padding-top: 120px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+
+.teal {
+    color: #00ADB5;
+}
+
+.unclickable {
+    pointer-events: none;
+}
+
+.pad-right {
+    padding-right: 25px;
+}
+
+.centered {
+    display: block;
+    justify-content: center;
+    /* Centers horizontally */
+    align-items: center;
+    /* Centers vertically */
+    text-align: center;
+    /* Centers text for block elements inside */
+    height: 100%;
+    /* You might adjust this based on your layout */
+}
+
+.btn {
+    background-color: #EEEFEE;
+    color: #EEEEEE;
+    text-decoration: none;
+    padding: 7px 3px;
+    border: 2px solid transparent;
+}
+
+.btn:hover {
+    border: 2px solid #00ADB5;
+}
+
+.to-top-btn {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    border-radius: 5px;
+    background-color: transparent;
+    color:#9C27B0;
+}
+
+.icon {
+    width: 50px;
+    /* Adjust size as needed */
+    padding: 10px;
+    height: auto;
+    transition: opacity 0.3s;
+    /* Smooth transition for hover effect */
+}
+
+.contact-text a {
+    text-decoration: none;
+    /* Or 'none' if you prefer a cleaner look */
+    font-weight: bold;
+    color: #00ADB5;
+}
+
+.payment-address {
+    padding-top: 1px;
+}
+
+
+@media (max-width: 992px) {
+    .payment-address {
+        white-space: nowrap;      /* Prevents the text from wrapping to a new line */
+        overflow: hidden;         /* Hides the overflow text */
+        text-overflow: ellipsis;  /* Adds an ellipsis to indicate truncated text */
+        display: block;           /* Optional: Depending on your layout, you might need to set this to block */
+        width: 100%;              /* Set a specific width as per your layout requirements */
+        max-width: 992px;
+    }
+}
