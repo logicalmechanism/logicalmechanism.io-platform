@@ -6,6 +6,7 @@
     /* Centers the content horizontally */
     gap: 20px;
     /* Optional: Adds space between text and image */
+    max-height: 500px;
 }
 
 .splash-text a {
@@ -19,12 +20,12 @@
 .splash-image {
     flex: 1;
     /* Each takes up equal amount of space */
+
 }
 
 .splash-image img {
     max-width: 90%;
     /* Ensures the image is responsive */
-    max-height: 500px;
     /* Maintains the aspect ratio */
 }
 
