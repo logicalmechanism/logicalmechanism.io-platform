@@ -24,7 +24,7 @@
 .splash-image img {
     max-width: 90%;
     /* Ensures the image is responsive */
-    height: auto;
+    max-height: 500px;
     /* Maintains the aspect ratio */
 }
 

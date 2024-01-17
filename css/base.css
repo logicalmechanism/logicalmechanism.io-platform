@@ -82,6 +82,7 @@ section {
     padding-top: 120px;
     padding-left: 40px;
     padding-right: 40px;
+    max-height: 600px;
 }
 
 .teal {
@@ -133,8 +134,6 @@ section {
 }
 
 .icon {
-    width: 50px;
-    height: auto;
     /* Adjust size as needed */
     padding: 10px;
     transition: opacity 0.3s;

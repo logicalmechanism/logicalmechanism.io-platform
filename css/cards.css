@@ -31,14 +31,10 @@
     /* Centering the content */
     padding: 15px;
     /* Padding inside the card */
+    max-height: 475px;
 }
 
 .card img {
-    width: 70%;
-    /* Full width of the card */
-    height: auto;
-    /* Maintain aspect ratio */
-    margin-bottom: 10px;
     /* Space between image and text */
     margin-top: auto;
     /* Pushes the link to the bottom */
@@ -67,6 +63,9 @@
     .card img {
         display: none;
         /* Hide images */
+    }
+    .card {
+        height: 75px;
     }
 }
 
