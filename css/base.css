@@ -1,4 +1,5 @@
 * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -20,52 +21,56 @@ body {
     color: #FEEFEE;
     font-family: 'Comfortaa', sans-serif;
     font-size: 18px;
+    background-image: -o-linear-gradient(#222831, #222831 50px, #121212 100px);
     background-image: linear-gradient(#222831, #222831 50px, #121212 100px);
     /* Adjust colors and heights */
     overflow-x: hidden;
     /* Prevents horizontal scroll */
 }
-
-header {
+main {min-height: 2400px;}
+nav {
     /* This ensures the navbar sticks to the top of the viewport */
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
+
 footer {
-    position: relative; /* This is important */
+    position: relative;
+    /* This is important */
     margin-top: 50px;
     margin-bottom: 125px;
-    padding-top: 50px;
-}
-
-footer:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 25%;
-    width: 50%; /* Halfway across the footer */
-    height: 1px; /* Same thickness as your original border */
-    background-color: #00ADB5; /* Same color as your original border */
+    padding-top: 100px;
+    max-height: 600px;
 }
 
 
 code {
+    -webkit-user-select: all;
+    -moz-user-select: all;
     user-select: all;
 }
 
 span {
+    -webkit-user-select: all;
+    -moz-user-select: all;
     user-select: all;
 }
 
 small {
+    -webkit-user-select: all;
+    -moz-user-select: all;
     user-select: all;
 }
 
 nav ul {
     list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -84,6 +89,8 @@ section {
     padding-right: 40px;
     max-height: 600px;
 }
+
+
 
 .teal {
     color: #00ADB5;
@@ -107,6 +114,8 @@ section {
 
 .centered {
     /* Centers horizontally */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     /* Centers vertically */
     text-align: center;
@@ -130,12 +139,15 @@ section {
     right: 5%;
     border-radius: 5px;
     background-color: transparent;
-    color:#9C27B0;
+    color: #9C27B0;
+    z-index: 1000;
 }
 
 .icon {
     /* Adjust size as needed */
     padding: 10px;
+    -webkit-transition: opacity 0.3s;
+    -o-transition: opacity 0.3s;
     transition: opacity 0.3s;
     /* Smooth transition for hover effect */
 }
@@ -148,12 +160,21 @@ section {
 }
 
 .contact-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     /* Vertically center content */
     place-items: center;
     /* Distribute space evenly */
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -164,11 +185,17 @@ section {
 
 @media (max-width: 992px) {
     .payment-address {
-        white-space: nowrap;      /* Prevents the text from wrapping to a new line */
-        overflow: hidden;         /* Hides the overflow text */
-        text-overflow: ellipsis;  /* Adds an ellipsis to indicate truncated text */
-        display: block;           /* Optional: Depending on your layout, you might need to set this to block */
-        width: 100%;              /* Set a specific width as per your layout requirements */
+        white-space: nowrap;
+        /* Prevents the text from wrapping to a new line */
+        overflow: hidden;
+        /* Hides the overflow text */
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        /* Adds an ellipsis to indicate truncated text */
+        display: block;
+        /* Optional: Depending on your layout, you might need to set this to block */
+        width: 100%;
+        /* Set a specific width as per your layout requirements */
         max-width: 992px;
     }
 }
