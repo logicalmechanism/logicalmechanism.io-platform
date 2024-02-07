@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders the search input', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  // Using getByPlaceholderText to find the input field
+  const searchInput = screen.getByPlaceholderText(/address or transaction hash/i);
+  expect(searchInput).toBeInTheDocument();
 });

@@ -1,0 +1,20 @@
+packages:
+  - name: query
+    shared: false
+    environment:
+      NEO4J_USERNAME: "${NEO4J_USERNAME}"
+      NEO4J_URI: "${NEO4J_URI}"
+      NEO4J_PASSWORD: "${NEO4J_PASSWORD}"
+    functions:
+      - name: address
+        runtime: python:3.11
+        limits:
+          timeout: 300000
+        web: true
+        webSecure: false
+        binary: false
+      - name: tx
+        runtime: python:3.11
+        web: true
+        webSecure: false
+        binary: false
