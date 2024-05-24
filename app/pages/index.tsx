@@ -9,8 +9,8 @@ import AssetGrid from '../components/AssetGrid'; // Adjust the path as necessary
 
 const Home: NextPage = () => {
   const { connected, wallet } = useWallet();
-  const [utxo, setUTxO] = useState<UTxO | null>(null);
   const [network, setNetwork] = useState<null | number>(null);
+  const [utxo, setUTxO] = useState<UTxO | null>(null);
   const [assets, setAssets] = useState<null | any>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [scriptAddress, setScriptAddress] = useState<string | null>(null);
